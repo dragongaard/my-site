@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>John Taylor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --text: #1a1a18;
+      --muted: #6b6b67;
+      --link: #1a1a18;
+      --link-hover: #555550;
+      --border: #e4e3df;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+      font-size: 19px;
+      line-height: 1.7;
+      padding: 3.5rem 1.5rem 6rem;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      letter-spacing: 0.01em;
+      margin-bottom: 1.25rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    section {
+      margin-bottom: 2.25rem;
+    }
+
+    section p {
+      color: var(--text);
+      margin-bottom: 1em;
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .label {
+      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: var(--border);
+      transition: text-decoration-color 0.15s;
+    }
+
+    a:hover {
+      text-decoration-color: var(--muted);
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16150f;
+        --text: #e8e6df;
+        --muted: #888880;
+        --link: #e8e6df;
+        --link-hover: #bbb;
+        --border: #2e2d26;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>John Taylor</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="mailto:johnroberttay@gmail.com">Contact ↗</a>
+      <a href="https://www.linkedin.com/in/john-t-910505128/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="label">Now</div>
+    <p>
+      Research Director at <a href="https://morningconsult.com" target="_blank" rel="noopener">Morning Consult</a>,
+      working in market research, consumer insights, and decision intelligence.
+      Based in Washington, D.C.
+    </p>
+  </section>
+
+  <section>
+    <div class="label">Before</div>
+    <p>
+      Marketing and political consulting at IMGE and Victory Phones.
+    </p>
+  </section>
+
+  <section>
+    <div class="label">Education</div>
+    <p>
+      Philosophy and history at Hillsdale College. Graduate coursework at
+      the Dominican School of Philosophy and Theology and the Graduate Theological Union.
+      Master's thesis on Heidegger's critique of the Aristotelian definition of truth
+      in relation to Aquinas' metaphysics and epistemology.
+    </p>
+    <p>
+      I study the origins and evolution of ideas. That thread runs through my work:
+      how opinion and thought shape the world.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 John Taylor
+  </footer>
+
+</body>
+</html>
