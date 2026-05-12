@@ -6,7 +6,7 @@
   <title>John Taylor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@0;1&family=IBM+Plex+Serif:ital@0;1&family=Space+Mono&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #faf9f7;
@@ -15,23 +15,42 @@
       --link: #1a1a18;
       --link-hover: #555550;
       --border: #e4e3df;
+      --amber: #c8922a;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      border-radius: 0 !important;
     }
 
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+      font-family: 'IBM Plex Serif', 'Georgia', 'Times New Roman', serif;
       font-size: 19px;
       line-height: 1.7;
       padding: 3.5rem 1.5rem 6rem;
       max-width: 580px;
       margin: 0 auto;
+      cursor: crosshair;
+      position: relative;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
     }
 
     header {
@@ -52,16 +71,29 @@
     }
 
     nav a {
-      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
       font-size: 0.85rem;
       color: var(--muted);
       text-decoration: none;
       letter-spacing: 0.02em;
       transition: color 0.15s;
+      position: relative;
     }
 
     nav a:hover {
-      color: var(--text);
+      color: var(--amber);
+    }
+
+    nav a:hover::after {
+      content: '_';
+      animation: blink 1s step-end infinite;
+      color: var(--amber);
+      margin-left: 1px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
     section {
@@ -78,9 +110,9 @@
     }
 
     .label {
-      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      font-family: 'Space Mono', 'Courier New', monospace;
       font-size: 0.72rem;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       color: var(--muted);
       margin-bottom: 0.6rem;
@@ -102,7 +134,7 @@
       margin-top: 4rem;
       padding-top: 1.5rem;
       border-top: 1px solid var(--border);
-      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      font-family: 'Space Mono', 'Courier New', monospace;
       font-size: 0.8rem;
       color: var(--muted);
     }
@@ -161,7 +193,7 @@
   </section>
 
   <footer>
-    &copy; 2025 John Taylor
+    &copy; 2026 John Taylor
   </footer>
 
 </body>
